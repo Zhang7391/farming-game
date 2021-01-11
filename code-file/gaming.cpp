@@ -4,7 +4,7 @@ int main()
 {
 	Page view;
 
-	int keyboard;
+//	int keyboard;
 	view.main();
 
 	while(1)
@@ -15,31 +15,42 @@ int main()
 	return 0;
 }
 
-//Page public
-void Page::main()
+//Page private
+void Page::MainInIt(int JumpTime, string ShowFull)
 {
-	string ShowFull("Welcome to this large farmland!");
-	int JumpTime = ShowFull.length();
-	string ShowDown = ShowFull;
-	string ShowUp(JumpTime, ' ');
-
-	int Jump=0;
+	int Jump = 0;
 	while(JumpTime >= Jump)
 	{
+		Game value;
 		system("clear");
-		
+		system("clear");
+
+		string ShowDown = ShowFull;
+		string ShowUp(JumpTime, ' ');
+
 		ShowUp[Jump] = ShowFull[Jump];
 		ShowDown[Jump] = ' ';
 
-		cout << '\n' << ShowUp << '\n';
-		cout << ShowDown << '\n';
+		cout << "My farmland" << "\n\n";
 
-		ShowUp[Jump] = ' ';
-		ShowDown[Jump] = ShowFull[Jump];
+		cout << "Farmland Name\tStatus\t\tTime\t\t\n";
+		for(int a=0;value.FarmlandNumber>a;a++) cout << "Farmland NO." << a+1 << "\tloading...\tloading...\n";
+
+		cout << "\n" << ShowUp << '\n';	//jump text
+		cout << ShowDown << '\n';
 
 		Jump++;
 		system("sleep 0.09s");
 	}
+}
 
-//cout << ShowFull[5] << '\n';
+//Page public
+void Page::main()
+{
+	Game value;
+
+	string ShowFull("Welcome to this large farmland!");
+	int ShowFullLong = ShowFull.length();
+
+	this->MainInIt(ShowFullLong, ShowFull);
 }

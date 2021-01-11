@@ -10,4 +10,9 @@
 	3. 購買道具
 4. 遊戲存檔功能
 
+如果程式報錯請確認以下程式包有安裝
+* 缺少`#include<conio.h>`
+	* [安裝conio.h](https://github.com/zoelabbb/conio.h)
+
+
 ※由於本人的作業環境是Linux(CentOS 7)，有使用到部分Linux系統指令，所以Windows和Mac無法執行，clone前請注意是否是使用Linux系統。
